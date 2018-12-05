@@ -1,2 +1,3 @@
 # MeeOpp
-A sample project.
+
+A sample project in React, Redux and Node.
