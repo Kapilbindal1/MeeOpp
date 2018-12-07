@@ -31,9 +31,9 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
  */
 export const configureStore = () => {
   store = createStore(persistedReducer, applyMiddleware(reduxThunk, axiosMiddleware(axiosClient)));
-
+  const dispatch = (...args) => store.dispatch(...args);
   persistor = persistStore(store);
-  return { store, persistor };
+  return { store, persistor, dispatch };
 };
 
 /**

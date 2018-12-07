@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Screen should render correctly 1`] = `
+<div>
+  <header
+    className="headerOfUserProfile"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="test-file-stub"
+    />
+  </header>
+  <div
+    className="userProfileDiv"
+  >
+    <div
+      className="GridcolSize2 newRegisterPage disabled-card card"
+    >
+      <div
+        className="card-body"
+      >
+        <p
+          className="pTag"
+        >
+          Please fill in this form to create an account.
+        </p>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": "30px",
+        }
+      }
+    >
+      <form>
+        <div>
+          <label
+            className=""
+          >
+            <b>
+              First Name
+            </b>
+          </label>
+          <input
+            className="inputField"
+            name="firstName"
+            onChange={[Function]}
+            placeholder="Enter First Name"
+            type="text"
+            value="John"
+          />
+          <label
+            className=""
+          >
+            <b>
+              Last Name
+            </b>
+          </label>
+          <input
+            className="inputField"
+            name="lastName"
+            onChange={[Function]}
+            placeholder="Enter Last Name"
+            type="text"
+            value="William"
+          />
+          <label
+            className=""
+          >
+            <b>
+              Company
+            </b>
+          </label>
+          <input
+            className="inputField"
+            name="company"
+            onChange={[Function]}
+            placeholder="Enter Company"
+            type="text"
+            value="innow8"
+          />
+          <label
+            className=""
+          >
+            <b>
+              Department
+            </b>
+          </label>
+          <input
+            className="inputField"
+            name="department"
+            onChange={[Function]}
+            placeholder="Enter department"
+            type="text"
+            value="Computer science"
+          />
+          <label
+            className=""
+          >
+            <b>
+              Position
+            </b>
+          </label>
+          <input
+            className="inputField"
+            name="position"
+            onChange={[Function]}
+            placeholder="Enter Position"
+            type="text"
+            value="Developer"
+          />
+          <label
+            className=""
+          >
+            <b>
+              Email
+            </b>
+             
+            <span
+              style={
+                Object {
+                  "color": "red",
+                }
+              }
+            >
+              *
+            </span>
+          </label>
+          <input
+            className="inputField"
+            name="email"
+            onChange={[Function]}
+            placeholder="Enter Email"
+            type="text"
+            value="contact@innow8apps.com"
+          />
+          <div
+            className="saveButton"
+          >
+            <button
+              aria-label={null}
+              className="submitOrCancel btn btn-secondary"
+              onClick={[Function]}
+              type="button"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

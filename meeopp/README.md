@@ -46,6 +46,7 @@ $ npm install
 Run the Client side (React app).
 
 ```
+$ cd Project Folder/
 $ cd client
 $ npm start
 ```
@@ -54,6 +55,7 @@ Run the App server.
 
 ```
 $ cd Project Folder/
+$ cd server
 $ nodemon server.js
 ```
 

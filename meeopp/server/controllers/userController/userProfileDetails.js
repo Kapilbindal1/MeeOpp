@@ -3,6 +3,7 @@ const User = require('../../models/userModel');
 const util = require('../../common/utils');
 // Function to save user details in user table
 exports.saveUserProfileDetails = function(req, res) {
+  console.log(req.body, 'reqreqreqreq');
   util.validateRequiredKeys(req.body, [{ key: 'email', name: 'Email' }], res, error => {
     if (!error) {
       const user = new User({
@@ -34,7 +35,6 @@ exports.saveUserProfileDetails = function(req, res) {
 
 // Function to get all userDetails if exists ( from user table)
 exports.getUserProfileDetails = function(req, res) {
-  console.log(req.body.id);
   util.validateRequiredKeys(req.body, [{ key: 'id', name: 'Id' }], res, error => {
     if (!error) {
       console.log('req.body', req.body.id);

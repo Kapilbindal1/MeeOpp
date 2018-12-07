@@ -1,8 +1,7 @@
-/* eslint-disable */
 /* eslint-disable no-alert */
 /* eslint-disable no-undef */
 import React, { Component } from 'react';
-import { Card, CardBody, Button } from 'reactstrap';
+import { Card, CardBody, Button, Label } from 'reactstrap';
 import { connect } from 'react-redux';
 import '../../App.css';
 import PropTypes from 'prop-types';
@@ -10,11 +9,10 @@ import logo from '../../assets/meeopplogo.png';
 import { userProfileDetails, getUserDetails } from '../../redux/userProfile/action';
 import Validation from '../validations';
 
-class ProfileScreen extends Component {
+export class ProfileScreen extends Component {
   constructor(props) {
     super(props);
-    // eslint-disable-next-line react/prop-types
-    const { firstName, lastName, company, department, position, email } = props.allDetails;
+    const { firstName, lastName, company, department, position, email, id } = props.allDetails;
     this.state = {
       firstName,
       lastName,
@@ -22,6 +20,8 @@ class ProfileScreen extends Component {
       department,
       position,
       email,
+      // eslint-disable-next-line react/no-unused-state
+      id,
     };
     this.onSave = this.onSave.bind(this);
   }
@@ -44,6 +44,8 @@ class ProfileScreen extends Component {
             department: details.department,
             position: details.position,
             email: details.email,
+            // eslint-disable-next-line react/no-unused-state
+            id: details.id,
           });
         }
         return null;
@@ -101,9 +103,9 @@ class ProfileScreen extends Component {
           <div style={{ margin: '30px' }}>
             <form>
               <div>
-                <label>
+                <Label>
                   <b>First Name</b>
-                </label>
+                </Label>
                 <input
                   className="inputField"
                   type="text"
@@ -112,9 +114,9 @@ class ProfileScreen extends Component {
                   value={firstName}
                   onChange={e => this.onUpdate('firstName', e.currentTarget.value)}
                 />
-                <label>
+                <Label>
                   <b>Last Name</b>
-                </label>
+                </Label>
                 <input
                   className="inputField"
                   type="text"
@@ -123,9 +125,9 @@ class ProfileScreen extends Component {
                   value={lastName}
                   onChange={e => this.onUpdate('lastName', e.currentTarget.value)}
                 />
-                <label>
+                <Label>
                   <b>Company</b>
-                </label>
+                </Label>
                 <input
                   className="inputField"
                   type="text"
@@ -134,9 +136,9 @@ class ProfileScreen extends Component {
                   value={company}
                   onChange={e => this.onUpdate('company', e.currentTarget.value)}
                 />
-                <label>
+                <Label>
                   <b>Department</b>
-                </label>
+                </Label>
                 <input
                   className="inputField"
                   type="text"
@@ -145,9 +147,9 @@ class ProfileScreen extends Component {
                   value={department}
                   onChange={e => this.onUpdate('department', e.currentTarget.value)}
                 />
-                <label>
+                <Label>
                   <b>Position</b>
-                </label>
+                </Label>
                 <input
                   className="inputField"
                   type="text"
@@ -156,9 +158,9 @@ class ProfileScreen extends Component {
                   value={position}
                   onChange={e => this.onUpdate('position', e.currentTarget.value)}
                 />
-                <label>
+                <Label>
                   <b>Email</b> <span style={{ color: 'red' }}>*</span>
-                </label>
+                </Label>
                 <input
                   className="inputField"
                   type="text"
@@ -185,6 +187,7 @@ class ProfileScreen extends Component {
 ProfileScreen.propTypes = {
   userProfileDetails: PropTypes.func.isRequired,
   getUserDetails: PropTypes.func.isRequired,
+  allDetails: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 
 const mapStateToProps = state => ({

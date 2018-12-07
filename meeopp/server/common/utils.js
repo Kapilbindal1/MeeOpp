@@ -36,7 +36,6 @@ exports.validateRequiredKeys = function(body, fields, res, callback) {
       break;
     }
   }
-  console.log('errorField', errorField);
   if (errorField) {
     res.statusCode = 404;
     res.json({
