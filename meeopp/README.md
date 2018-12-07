@@ -29,14 +29,14 @@ meeopp/
 For server side
 
 ```
-$ cd Project Folder/
+$ cd Project_Folder/
 $ npm install
 ```
 
 For client side
 
 ```
-$ cd Project Folder/
+$ cd Project_Folder/
 $ cd client
 $ npm install
 ```
@@ -46,7 +46,7 @@ $ npm install
 Run the Client side (React app).
 
 ```
-$ cd Project Folder/
+$ cd Project_Folder/
 $ cd client
 $ npm start
 ```
@@ -54,7 +54,7 @@ $ npm start
 Run the App server.
 
 ```
-$ cd Project Folder/
+$ cd Project_Folder/
 $ cd server
 $ nodemon server.js
 ```
