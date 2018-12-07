@@ -90,5 +90,4 @@ Linting in mandatory and must be integrated as part of your work flow. All pull 
 ## Assistance and questions
 
 If you have any questions or need any assistance with anything, please ask on the slack channel or sent us an email- contact@innow8apps.com.
-Email[here](contact@innow8apps.com)
 Please do not waste many hours stuck on a single problem. If you are stuck, please ask others for help.
